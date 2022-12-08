@@ -1,9 +1,11 @@
-import Navbar from './components/Navbar';
+import { Button } from "@mui/material";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      <Button variant="text">Text</Button>
+<Button variant="contained">Contained</Button>
+<Button variant="outlined" disabled>Outlined</Button>
     </div>
   );
 }
