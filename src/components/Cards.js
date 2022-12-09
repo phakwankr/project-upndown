@@ -10,13 +10,13 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-const Post = () => {
+const Cards = () => {
   return (
     <Card sx={{ margin: 5 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-            R
+          <Avatar sx={{ bgcolor: "gray" }} aria-label="recipe">
+            Fit
           </Avatar>
         }
         action={
@@ -24,7 +24,7 @@ const Post = () => {
             <MoreVert />
           </IconButton>
         }
-        title="John Doe"
+        title="Fit User"
         subheader="September 14, 2022"
       />
       <CardMedia
@@ -55,4 +55,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default Cards;

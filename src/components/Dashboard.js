@@ -1,8 +1,8 @@
 import { Box, Stack, Skeleton } from "@mui/material";
 import React, { useState } from "react";
-import Post from "./Post";
+import Cards from "./Cards";
 
-const Feed = () => {
+const Dashboard = () => {
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
@@ -10,7 +10,7 @@ const Feed = () => {
   }, [3000]);
 
   return (
-    <Box flex={4} p={{ xs: 0, md: 2 }}>
+    <Box flex={5} p={{ xs: 0, md: 2 }}>
       {loading ? (
         <Stack spacing={1}>
           <Skeleton variant="text" height={100} />
@@ -20,16 +20,16 @@ const Feed = () => {
         </Stack>
       ) : (
         <>
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
-          <Post />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
+          <Cards />
         </>
       )}
     </Box>
   );
 };
 
-export default Feed;
+export default Dashboard;

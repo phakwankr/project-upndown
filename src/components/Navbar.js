@@ -2,6 +2,7 @@ import {
   AppBar,
   Avatar,
   Box,
+  InputBase,
   Menu,
   MenuItem,
   styled,
@@ -15,6 +16,12 @@ const StyledToolbar = styled(Toolbar)({
   justifyContent: "space-between",
 });
 
+const Search = styled("div")(({ theme }) => ({
+  backgroundColor: "white",
+  padding: "0 10px",
+  borderRadius: theme.shape.borderRadius,
+  width: "40%",
+}));
 
 const Icons = styled(Box)(({ theme }) => ({
   display: "none",
@@ -39,21 +46,22 @@ const Navbar = () => {
     <AppBar position="sticky" sx={{ background: "linear-gradient(90deg, rgba(166,135,187,1) 0%, rgba(212,235,254,1) 61%, rgba(211,237,211,1) 88%);"}}>
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Up 'n Down Fitness Tracker
+          UP 'n DOWN
         </Typography>
-        
+        <Search>
+          <InputBase placeholder="search..." />
+        </Search>
         <Icons>
           <Avatar
-            sx={{ width: 45, height: 45 }}
-            src="C:\Users\asus\Desktop\final-project\upndown\src\undraw_Male_avatar_re_y880.png"
+            sx={{ width: 30, height: 30 }}
+            src="#"
             onClick={(e) => setOpen(true)}
           />
         </Icons>
-
         <UserBox onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ width: 30, height: 30 }}
-            src="C:\Users\asus\Desktop\final-project\upndown\src\undraw_Male_avatar_re_y880.png"
+            src="#"
           />
           <Typography variant="span">John</Typography>
         </UserBox>
@@ -72,9 +80,9 @@ const Navbar = () => {
           horizontal: "right",
         }}
       >
-        <MenuItem>Profile</MenuItem>
-        <MenuItem>My Dashboard</MenuItem>
         <MenuItem>Add Activities</MenuItem>
+        <MenuItem>My Profile</MenuItem>
+        <MenuItem>Logout</MenuItem>
       </Menu>
     </AppBar>
   );

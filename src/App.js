@@ -1,5 +1,5 @@
 import Sidebar from "./components/Sidebar";
-import Feed from "./components/Feed";
+import Dashboard from "./components/Dashboard";
 import { Box, createTheme, Stack, ThemeProvider } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Add from "./components/Add";
@@ -19,7 +19,7 @@ function App() {
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
         <Sidebar setMode={setMode} mode={mode}/>
-          <Feed />
+          <Dashboard />
         </Stack>
         <Add />
       </Box>
