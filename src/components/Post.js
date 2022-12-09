@@ -10,7 +10,7 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-const Cards = () => {
+const Post = () => {
   return (
     <Card sx={{ margin: 5 }}>
       <CardHeader
@@ -55,4 +55,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default Post;

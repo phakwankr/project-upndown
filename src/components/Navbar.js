@@ -5,8 +5,8 @@ import {
   Menu,
   MenuItem,
   styled,
-  Typography,
   Toolbar,
+  Typography,
 } from "@mui/material";
 import React, { useState } from "react";
 
@@ -36,29 +36,24 @@ const UserBox = styled(Box)(({ theme }) => ({
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <AppBar 
-      position="sticky"
-      sx={{
-        background:"linear-gradient(90deg, rgba(166,135,187,1) 0%, rgba(255,190,190,1) 32%, rgba(212,235,254,1) 61%, rgba(254,223,182,1) 88%);"
-      }}
-    >
+    <AppBar position="sticky" sx={{ background: "linear-gradient(90deg, rgba(166,135,187,1) 0%, rgba(212,235,254,1) 61%, rgba(211,237,211,1) 88%);"}}>
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Up 'n Down
+          Up 'n Down Fitness Tracker
         </Typography>
-
+        
         <Icons>
           <Avatar
-            sx={{ width: 30, height: 30 }}
-            src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            sx={{ width: 45, height: 45 }}
+            src="C:\Users\asus\Desktop\final-project\upndown\src\undraw_Male_avatar_re_y880.png"
             onClick={(e) => setOpen(true)}
           />
         </Icons>
-        
+
         <UserBox onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ width: 30, height: 30 }}
-            src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="C:\Users\asus\Desktop\final-project\upndown\src\undraw_Male_avatar_re_y880.png"
           />
           <Typography variant="span">John</Typography>
         </UserBox>
@@ -79,7 +74,7 @@ const Navbar = () => {
       >
         <MenuItem>Profile</MenuItem>
         <MenuItem>My Dashboard</MenuItem>
-        <MenuItem>Logout</MenuItem>
+        <MenuItem>Add Activities</MenuItem>
       </Menu>
     </AppBar>
   );
