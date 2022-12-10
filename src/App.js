@@ -1,30 +1,27 @@
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./components/Dashboard";
-import { Box, createTheme, Stack, ThemeProvider } from "@mui/material";
-import Navbar from "./components/Navbar";
-import Add from "./components/Add";
-import { useState } from "react";
+import React from "react";
+import Navbar from "./components/Bars/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Pages/Home";
+import FormComponent from "./components/FormComponent/FormComponent";
+import Stat from "./components/Pages/Stat";
+import CardList from "./components/Cards/CardList";
 
 function App() {
-  const [mode, setMode] = useState("light");
-
-  const darkTheme = createTheme({
-    palette: {
-      mode: mode,
-    },
-  });
   return (
-    <ThemeProvider theme={darkTheme}>
-      <Box bgcolor={"background.default"} color={"text.primary"}>
+    <React.Fragment>
+      <header>
         <Navbar />
-        <Stack direction="row" spacing={2} justifyContent="space-between">
-        <Sidebar setMode={setMode} mode={mode}/>
-          <Dashboard />
-        </Stack>
-        <Add />
-      </Box>
-    </ThemeProvider>
+          </header>
+      <main>
+        <Routes>
+            <Route path="/home" element={<Home />} exact />
+            <Route path="/add" element={<FormComponent />} exact />
+            <Route path="/stat" element={<Stat />} exact />
+            <Route path="/all" element={<CardList />} exact />
+        </Routes>
+      </main>
+  </React.Fragment>     
   );
-}
+};
 
 export default App;
