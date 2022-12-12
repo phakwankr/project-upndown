@@ -16,7 +16,7 @@ import {
 
 
 //state declare of each information
-const FormComponent = (props) =>{
+const AddActivity = (props) =>{
     const [activityName,setActivityName] = useState('')
     const [activityType,setActivityType] = useState('')
     const [description,setDescription] = useState('')
@@ -93,13 +93,13 @@ const FormComponent = (props) =>{
             <form onSubmit={submitData} >
                 <Box
                 display="flex" 
-                maxWidth={5450} 
+                maxWidth={450} 
                 flexDirection={'column'} 
                 boxShadow = "10px 10px 20px #ccc"
-                padding ={10}
+                padding ={1}
                 margin='auto'
                 marginTop={3}
-                marginBottom={5}
+                marginBottom={8}
                 borderRadius = {5}>
                 <Box display="flex" marginLeft = 'auto'>
                 <IconButton  >
@@ -151,4 +151,4 @@ const FormComponent = (props) =>{
     </div>
      )
     }
-export default FormComponent
+export default AddActivity

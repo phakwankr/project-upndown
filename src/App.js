@@ -1,10 +1,11 @@
 import React from "react";
 import Navbar from "./components/Bars/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/Pages/Home";
+import Stats from "./pages/dashboard/Stats";
+import AddActivity from "./pages/dashboard/AddActivity";
 import FormComponent from "./components/FormComponent/FormComponent";
-import Stat from "./components/Pages/Stat";
-import CardList from "./components/Cards/CardList";
+import CustomizedDialogs from "./components/FormComponent/dialog";
+import CardActivity from "./components/Cards/CardActivity";
 
 function App() {
   return (
@@ -14,13 +15,20 @@ function App() {
           </header>
       <main>
         <Routes>
-            <Route path="/home" element={<Home />} exact />
-            <Route path="/add" element={<FormComponent />} exact />
-            <Route path="/stat" element={<Stat />} exact />
-            <Route path="/all" element={<CardList />} exact />
+            <Route path="/all" element={<CardActivity />} exact />
+            <Route path="/add" element={<AddActivity />} exact />
+            <Route path="/stats" element={<Stats />} exact />
         </Routes>
       </main>
+
+      <div className="App">
+        <CustomizedDialogs>
+          <FormComponent />
+        </CustomizedDialogs>
+      </div>
+
   </React.Fragment>     
+
   );
 };
 

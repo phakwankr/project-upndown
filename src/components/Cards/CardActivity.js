@@ -1,4 +1,4 @@
-
+import * as React from 'react';
 
 
 const CardActivity = ({activityName,activityType,description,duration,date}) =>{

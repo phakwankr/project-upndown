@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { 
   AppBar, 
   Toolbar, 
-  Typography, 
   Tabs, 
   Tab,
   Menu,
@@ -11,8 +10,8 @@ import {
   styled,
   Box,
 } from '@mui/material'
-import RunCircleRoundedIcon from '@mui/icons-material/RunCircleRounded';
 import { NavLink } from 'react-router-dom';
+
 
 const Navbar = () => {
   const [value, setValue] = useState();
@@ -46,24 +45,22 @@ const Navbar = () => {
     <Box sx={{ display: 'flex' }}></Box>
       <AppBar 
       position='sticky' 
-      sx={{ background:"linear-gradient(90deg, rgba(166,135,187,1) 0%, rgba(233,198,232,1) 33%, rgba(212,235,254,1) 73%, rgba(251,254,189,1) 100%, rgba(211,237,211,1) 100%);" }}>
+      sx={{ background:"rgb(67, 154, 151)" }}>
         
         <StyledToolbar>
-
-          <Typography>
-            <RunCircleRoundedIcon />
-          </Typography>
           
+
+
+
           <Tabs 
             textColor='inherit' 
-            indicatorColor='secondary' 
+            indicatorColor='primary' 
             value={value} 
             onChange={(e,val)=>setValue(val)}>
             
-            <Tab LinkComponent={NavLink} to="/home" label='Home' />
+            <Tab LinkComponent={NavLink} to="/all" label='All Activity' />
+            <Tab LinkComponent={NavLink} to="/stats" label='Stats' />
             <Tab LinkComponent={NavLink} to="/add" label='Add Activity' />
-            <Tab LinkComponent={NavLink} to="/all" label='All Activities' />
-            <Tab LinkComponent={NavLink} to="/stat" label='Stat' />
           </Tabs>
 
         <Icons>
