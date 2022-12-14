@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Error, Landing, Register } from './pages'
-import { AllActivity, Profile, AddActivity, SharedLayout } from './pages/dashboard'
+import { Profile, AddActivity, SharedLayout, AllActivity } from './pages/dashboard'
 
 
 function App() {

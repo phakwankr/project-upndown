@@ -21,10 +21,11 @@ const Wrapper = styled.aside`
       margin-left: 0;
     }
     header {
-      height: 6rem;
+      height: 8rem;
       display: flex;
       align-items: center;
-      padding-left: 2.5rem;
+      padding-left: 2rem;
+
     }
     .nav-links {
       padding-top: 2rem;
@@ -46,7 +47,7 @@ const Wrapper = styled.aside`
       color: var(--grey-900);
     }
     .nav-link:hover .icon {
-      color: var(--primary-500);
+      color: var(--black-900);
     }
     .icon {
       font-size: 1.5rem;
@@ -54,12 +55,13 @@ const Wrapper = styled.aside`
       display: grid;
       place-items: center;
       transition: var(--transition);
-    }
-    .active {
       color: var(--grey-900);
     }
+    .active {
+      color: var(--black-900);
+    }
     .active .icon {
-      color: var(--primary-500);
+      color: var(--grey-900);
     }
   }
 `

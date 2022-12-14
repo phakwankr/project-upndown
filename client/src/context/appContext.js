@@ -152,13 +152,10 @@ const AppProvider = ({ children }) => {
   const createActivity = async () => {
     dispatch({ type: CREATE_ACTIVITY_BEGIN });
     try {
-      const { position, company, ActivityLocation, activityType, status } = state;
+      const { ActivityLocation, activityType } = state;
       await authFetch.post('/activity', {
-        position,
-        company,
         ActivityLocation,
         activityType,
-        status,
       });
       dispatch({ type: CREATE_ACTIVITY_SUCCESS });
       dispatch({ type: CLEAR_VALUES });

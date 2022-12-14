@@ -20,8 +20,8 @@ const Wrapper = styled.nav`
   .toggle-btn {
     background: transparent;
     border-color: transparent;
-    font-size: 1.75rem;
-    color: var(--primary-500);
+    font-size: 2.5rem;
+    color: var(--primary-700);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@ const Wrapper = styled.nav`
     width: 100%;
     background: var(--primary-100);
     box-shadow: var(--shadow-2);
-    padding: 0.5rem;
+    padding: 0rem;
     text-align: center;
     visibility: hidden;
     border-radius: var(--borderRadius);
@@ -57,7 +57,7 @@ const Wrapper = styled.nav`
   .dropdown-btn {
     background: transparent;
     border-color: transparent;
-    color: var(--primary-500);
+    color: var(--primary-000);
     letter-spacing: var(--letterSpacing);
     text-transform: capitalize;
     cursor: pointer;
